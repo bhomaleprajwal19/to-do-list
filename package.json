@@ -1,14 +1,17 @@
 {
   "name": "to-do-list",
-  "author": "https://bhomaleprajwal19.github.io/to-do-list/",
+  "author": "https://bhomaleprajwal19.github.io/to-do-list",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+  "postbuild": "cp -R dist/* docs/",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",

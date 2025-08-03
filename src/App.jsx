@@ -63,14 +63,14 @@ function App() {
   
 
   return (
-    <>
+    < div className="">
       <Navbar />
-      <div className="container w-full mx-auto m-5 bg-violet-100 rounded-xl p-5 min-h-[80vh] ">
-       <h1 className="font-bold text-center text-xl">myTask</h1>
+      <div className="container w-[80%]  mx-auto m-5 pt-2 bg-neutral-800 rounded-xl  min-h-[80vh] px-5 ">
+       <h1 className="font-bold text-center text-xl mt-4">myTask</h1>
         <div className="addTodo">
           <h2 className="text-lg font-bold mt-5 ">Add a todo</h2>
           <div className="flex">
-          <input className="w-full rounded-xl max-h-12 mt-5" type="text" value={todo} onChange={(e) => setTodo(e.target.value)}/>
+          <input className="w-full border border-black px-3 rounded-xl max-h-12 mt-5" type="text" value={todo} onChange={(e) => setTodo(e.target.value)}/>
           <button onClick={handleAdd}  disabled={todo.length<=1} className="bg-violet-800 m-6 text-white rounded-md hover:bg-violet-950 hover:font-bold p-3 py-1 disabled:bg-violet-500">Save</button>
           </div>
         </div>
@@ -100,7 +100,7 @@ function App() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
